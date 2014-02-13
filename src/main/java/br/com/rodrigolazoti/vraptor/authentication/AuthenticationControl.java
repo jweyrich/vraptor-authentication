@@ -15,10 +15,10 @@ import br.com.caelum.vraptor.ioc.SessionScoped;
 public class AuthenticationControl implements Serializable {
 
   private static final long serialVersionUID = -8162257388304382662L;
-  private Logger logger = LoggerFactory.getLogger(AuthenticationControl.class);
+  private static final Logger logger = LoggerFactory.getLogger(AuthenticationControl.class);
 
   private Object object;
-  private transient HttpSession httpSession;
+  private final transient HttpSession httpSession;
 
   public AuthenticationControl(HttpSession httpSession) {
     this.httpSession = httpSession;
