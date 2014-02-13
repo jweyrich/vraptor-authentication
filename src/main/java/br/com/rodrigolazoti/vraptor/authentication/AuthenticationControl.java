@@ -43,4 +43,11 @@ public class AuthenticationControl implements Serializable {
     return object;
   }
 
+  @Override
+  public String toString() {
+    return String.format("%s { object=%s }",
+        this.getClass().getName(),
+        this.object);
+  }
+
 }
